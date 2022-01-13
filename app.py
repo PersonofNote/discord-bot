@@ -45,6 +45,7 @@ async def on_message(message):
     # Disregard bot's own message
     if message.author == client.user:
         return
+    print(message.channel.id)
     response = f"Hello, @channel! I am collecting messages from this channel. They will be collected in a .csv file. \n If you haves questions or feedback, please ping (user or channel)"
     if message.content == '!download_messages':
         # Restrict to this channel for testing. message.content.split([0] should be the command, after that is args)
